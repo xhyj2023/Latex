@@ -36,3 +36,6 @@
 ```bash
 tlmgr install tikz fontspec geometry xcolor hyperref
 
+### 许可证
+-本项目采用 MIT 许可证，详情请参阅 LICENSE 文件。
+

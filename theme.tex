@@ -1,0 +1,127 @@
+\documentclass[a4paper,10pt]{article} 
+\usepackage[left=0.8in, right=0.8in, top=0.6in, bottom=0.6in]{geometry} 
+\usepackage{enumitem} 
+\usepackage{titlesec} 
+\usepackage{xcolor} 
+\usepackage{fontspec} 
+\usepackage{xeCJK} 
+\usepackage{graphicx} 
+\usepackage{wrapfig} 
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+% 颜色定义
+\definecolor{mypurple}{RGB}{70, 130, 180} 
+\definecolor{mygradient}{RGB}{200, 220, 240}
+
+% 标题格式与梯形设计
+\newcommand{\trapezoidtitleA}[1]{
+    \vspace{0cm} % 增加前后的空间
+    \noindent
+    \begin{tikzpicture}[baseline=(current bounding box.south)]
+        \fill[mypurple] (0,0) -- (0,0.8) -- (2.8,0.8) -- (2.3,0) -- cycle;
+        \node[anchor=west, text width=3.5cm, align=lift, text=white] at (0,0.4) {\Large\bfseries #1};
+    \end{tikzpicture}
+    \vspace{0.5cm}
+    \noindent
+}
+
+\newcommand{\trapezoidtitleB}[1]{
+    \vspace{0cm} % 增加前后的空间
+    \noindent
+    \begin{tikzpicture}[baseline=(current bounding box.south)]
+        \fill[mypurple] (0,0) -- (0,0.8) -- (2,0.8) -- (1.5,0) -- cycle;
+        \node[anchor=west, text width=3.5cm, align=lift, text=white] at (0,0.4) {\Large\bfseries #1};
+    \end{tikzpicture}
+    \vspace{0.5cm}
+    \noindent
+}
+
+
+% 标题格式
+\titleformat{\section}{\Large\bfseries\color{white}}{}{0em}{\color{mypurple}\underline} 
+\titleformat{\subsection}{\bfseries\color{mypurple}}{}{0em}{}
+
+\setCJKmainfont{Noto Serif CJK SC} 
+\setmainfont{Noto Serif} 
+
+\begin{document}
+\renewcommand{\baselinestretch}{1.5} % 设置行间距
+\begin{center}
+    \begin{minipage}[t]{0.7\textwidth}
+        {\huge \textbf{风玲}} 女|中华民族|\\22岁| 现住中国\\
+        \faEnvelope \ \texttt{abc@gmail.com} \ | \ \faPhone \ 123456789 \\
+        \faLinkedin \ \texttt{www.linkedin.com/in/abc} \ | \faGithub \ \texttt{github.com/abc}
+    \end{minipage}%
+    \begin{minipage}[t]{0.25\textwidth}
+        \includegraphics[width=0.5\textwidth]{images.jpg}
+    \end{minipage}
+    {\color{mypurple}\rule{1\linewidth}{1pt}}
+    \vspace{0cm} 
+\end{center}
+\vspace{-0.8cm} % 增加与下一个部分的间距
+
+\trapezoidtitleA{教育背景}
+\begin{wrapfigure}{l}{0.15\textwidth} % 左侧包围图片，宽度为文本框的15%
+    \includegraphics[width=0.1\textwidth]{school.png} % 大学徽标，设置宽度
+\end{wrapfigure} 
+\vspace{0cm} % 增加垂直间距
+\textbf{联合国大学}|统招全日制本科|专业:人工智能\\ % 教育机构与专业，粗体显示
+2021年9月 -- 2025年6月 \\ % 学习时间段
+\begin{itemize}[leftmargin=*] % 列表，左侧无缩进
+    \item 主要课程: 数据结构, 机器学习, 自然语言处理, 计算智能, 数据挖掘, 深度神经网络, 模式识别 % 课程列表
+\end{itemize}
+\vspace{0cm} % 调整与分割线的间距
+{\color{mypurple!60!black}{\rule{1\linewidth}{1pt}}} % 画一条分割线，背景颜色稍微变暗的紫色
+\vspace{-0.5cm} % 增加与下一个部分的间距
+
+\trapezoidtitleB{技能}
+\begin{itemize}[leftmargin=*]
+    \item \textcolor{mypurple}{\faPython} \ \textbf{编程语言}: 掌握Python，C++等编程语言，了解Java和MATLAB。
+    \item \textcolor{mypurple}{\faGit} \ \textbf{工具与环境}: 熟悉Git版本控制，熟练Linux系统常见发行版本，使用Docker进行环境部署与管理。
+    \item \textcolor{mypurple}{\faBrain} \ \textbf{人工智能}: 熟悉TensorFlow、PyTorch、Keras等框架，用于深度学习模型的开发与优化。
+    \item \textcolor{mypurple}{\faRobot} \ \textbf{机器学习与深度学习}: 具备监督学习、无监督学习与强化学习的理论基础，知晓如何构建卷积神经网络（CNN）、循环神经网络（RNN）、长短期记忆网络（LSTM）等。
+    \item \textcolor{mypurple}{\faChartLine} \ \textbf{数据处理与分析}: 熟练使用NumPy、Pandas等工具进行数据清洗、分析与可视化，能够使用Matplotlib、Seaborn进行数据可视化。
+    \item \textcolor{mypurple}{\faKeyboard} \ \textbf{自然语言处理}: 熟悉文本预处理、词向量（Word2Vec）、Transformer与BERT等预训练模型，应用于文本分类、生成及翻译任务。
+    \item \textcolor{mypurple}{\faCameraRetro} \ \textbf{计算机视觉}: 掌握OpenCV及深度学习在图像处理、目标检测与图像生成中的应用。
+    \item \textcolor{mypurple}{\faDatabase} \ \textbf{数据库}: 熟练操作SQL server、SQLite等数据库。
+\end{itemize}
+
+{\color{mypurple}\rule{1\linewidth}{1pt}}
+
+\vspace{-0.1cm}
+\trapezoidtitleA{实训经历}
+\noindent
+
+\parbox{\linewidth}{
+    \textbf{前后端开发} | 成都易腾创想科技有限公司 \\2024年8月 -- 2024年9月 \\
+    \begin{itemize}[leftmargin=*]
+   	 \item 负责数据库的搭建及优化
+  	 \item 设计并实现商品推荐模块
+    \end{itemize}
+}
+
+{\color{mypurple}\rule{1\linewidth}{1pt}}
+
+\vspace{-0.1cm}
+\trapezoidtitleA{项目经历}
+\noindent
+
+\parbox{\linewidth}{
+    \textbf{LSTM语音识别系统} \\
+    \begin{itemize}[leftmargin=*]
+        \item 利用pandas和librosa进行数据处理
+        \item 实现高效语音识别模型
+    \end{itemize}
+}
+
+{\color{mypurple}\rule{1\linewidth}{1pt}}
+
+\vspace{-0.1cm}
+\trapezoidtitleB{爱好} 
+\noindent
+
+\parbox{\linewidth}{
+    \faPaintBrush \ 绘画 \ \faCamera \ 摄影 \ \faTableTennis \ 乒乓球 \ \faBadminton \ 羽毛球
+}
+\end{document}

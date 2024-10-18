@@ -17,8 +17,9 @@
 
 ### 字体
 
-https://fonts.google.com/noto/specimen/Noto+Serif
-https://fonts.google.com/noto/specimen/Noto+Serif+SC
+- https://fonts.google.com/noto/specimen/Noto+Serif
+
+- https://fonts.google.com/noto/specimen/Noto+Serif+SC
 
 ### 必要宏包
 

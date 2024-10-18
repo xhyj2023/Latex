@@ -1,4 +1,4 @@
-# Latex-
+# Latex
 一个基于Xelatex的简历模板
 # 蓝色主题
 

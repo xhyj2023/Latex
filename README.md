@@ -36,7 +36,7 @@ tlmgr install tikz fontspec geometry xcolor hyperref
 ```
 ## 许可证
 
-使用MIT License 许可证 - 请查看 [LICENSE](./LICENSE) 文件了解详细信息。
+使用MIT License(MIT) 许可证 - 请查看 [LICENSE](./LICENSE) 文件了解详细信息。
 
 
 
